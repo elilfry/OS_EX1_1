@@ -2,6 +2,9 @@
 #include <math.h>
 #include <stdlib.h>
 
+long double poisson(int k ,double lambda) {
+    return (exp(-lambda) * pow(lambda, k)) / tgamma(k + 1);
+}
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
@@ -16,8 +19,8 @@ long double k = strtold(argv[2], NULL);
 
 //calc poisson
 
-long double poisson = (exp(-lambda) * pow(lambda, k)) / tgamma(k + 1);
-    printf("Result: %.10Lf\n", poisson*100);
+long double result = poisson(k, lambda);
+    printf("Result is : %.10Lf\n", result*100);
 
 
 return 0;
