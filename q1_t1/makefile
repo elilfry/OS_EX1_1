@@ -1,7 +1,7 @@
 CC = gcc
-CFLAGS = 
+CFLAGS = -g // -g is used to enable debugging
 
-all: q1_t1_recFunc q1_t1_byZero q1_t1_undefinedMemory
+all: q1_t1_recFunc q1_t1_byZero q1_t1_undefinedMemory 
 
 q1_t1_recFunc: q1_t1_recFunc.c
 	$(CC) $(CFLAGS) -o q1_t1_recFunc q1_t1_recFunc.c

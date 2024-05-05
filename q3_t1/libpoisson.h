@@ -5,6 +5,6 @@
 #include <stdlib.h>
 
 long double poisson(int k ,double lambda) {
-    return (exp(-lambda) * pow(lambda, k)) / tgamma(k + 1);
+    return (100*(exp(-lambda) * pow(lambda, k)) / tgamma(k + 1));
 }
 

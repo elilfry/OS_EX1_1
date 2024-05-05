@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 long double poisson(int k ,double lambda) {
-    return (exp(-lambda) * pow(lambda, k)) / tgamma(k + 1);
+    return (100*(exp(-lambda) * pow(lambda, k)) / tgamma(k + 1));
 }
 
 int main(int argc, char* argv[]) {
@@ -20,15 +20,21 @@ long double k = strtold(argv[2], NULL);
 //calc poisson
 
 long double result = poisson(k, lambda);
-    printf("Result is : %.10Lf\n", result*100);
+    printf("Result is : %.10Lf\n", result);
 
 
 return 0;
 }
 
-// cd q2_t1
-//gcc -o q2_t11  q2_t11.c -lm
+// cd q2_t1 
+
+//then make
+
 // ./q2_t11 5 10
+
+
+//if not work then use this command
+//gcc -o q2_t11  q2_t11.c -lm
 
 /*
 elifrydman@elifrydman-VirtualBox:~/Desktop/os_1/ex1_t_1_os/q2_t1$ ./q2_t11 5 10
