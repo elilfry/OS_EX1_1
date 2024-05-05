@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g // -g is used to enable debugging
+CFLAGS = -g 
 
 all: q1_t1_recFunc q1_t1_byZero q1_t1_undefinedMemory 
 

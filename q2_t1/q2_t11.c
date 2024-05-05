@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-long double poisson(int k ,double lambda) {
+long double poisson(int k ,int lambda) {
     return (100*(exp(-lambda) * pow(lambda, k)) / tgamma(k + 1));
 }
 

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <libpoisson.h>
+#include "poisson.h"
 
 
 int main(int argc, char* argv[]) {
