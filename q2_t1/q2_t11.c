@@ -12,7 +12,8 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-
+// argv[]= {"q2_t11", "5", "10"};
+// argc = 3;
 
 long double lambda = strtold(argv[1], NULL);
 long double k = strtold(argv[2], NULL);
