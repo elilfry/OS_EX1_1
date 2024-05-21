@@ -1,3 +1,8 @@
+//make
+//./q4_t1 < good_input1.txt > out1.txt
+
+
+
 // We took the dijkstra algorithm from geeksforgeeks and modified it to the format we've been asked to:
 #include <iostream>
 #include <vector>
@@ -22,10 +27,10 @@ vector<vector<int>> loadGraph(size_t size){
         for (size_t j = 0; j < size; j++) {
             if(i != j){
                 do{
-                    cout << "Enter the weight of [" << i << "] -> [" << j << "] edge";
+                    cout << "Enter the weight of [" << i << "] -> [" << j << "] edge ";
                     cin >> input;
                     if (input < 0){
-                        cout << "Invalid input - The weight of the edge must be greater or equal to 0";
+                        cout << "Invalid input - The weight of the edge must be greater or equal to 0\n Try again and ";
                     }
                     else{
                         graph[i][j] = (size_t)input;
@@ -34,6 +39,7 @@ vector<vector<int>> loadGraph(size_t size){
             }
         }
     }
+    cout << "\n The graph is: \n";
     
 
     //print the graph
@@ -59,12 +65,12 @@ vector<vector<int>> getNewGraph(){
     vector<vector<int>> graph(numVertices, vector<int>(numVertices, 0));
     //print the graph
 
-    for(size_t i = 0; i<numVertices; i++){
-        for(size_t j = 0; j<numVertices; j++){
-            cout << graph[i][j] << " ";
-        }
-        cout << endl;
-    }
+    // for(size_t i = 0; i<numVertices; i++){
+    //     for(size_t j = 0; j<numVertices; j++){
+    //         cout << graph[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
 
     //Get the input weights and place them in the adjacency matrix
     for (size_t i = 0; i < numVertices; i++) {
@@ -127,12 +133,12 @@ size_t minDistance(vector<int> dist, vector<bool> sptSet, size_t size)
 
 // A utility function to print the constructed distance
 // array
-void printSolution(vector<int> dist)
+void printSolution(vector<int> dist,size_t src)
 {
     cout << "";
-    cout << "Vertex \t Distance from Source" << endl;
+    cout << "Vertex \t Distance from Source vertex:  " << src << endl;
     for (size_t i = 0; i < dist.size() ; i++)
-        cout << i << " \t\t" << dist[i] << endl;
+        cout << i << " \t\t\t\t" << dist[i] << endl;
 }
 
 // Function that implements Dijkstra's single source
@@ -186,7 +192,7 @@ void dijkstra( vector<vector<int>> &graph, size_t src)
     }
 
     // print the constructed distance array
-    printSolution(dist);
+    printSolution(dist,src);
 }
 
 // driver's code
@@ -195,10 +201,10 @@ int main()
 
     size_t size;
 
-    cout << "Enter the amount of vertices in the graph\t";
+    cout << "Enter the amount of vertices in the graph\n";
     cin >> size;
     if (size < 1){
-        cout << "Invaild input -The size of the graph must be greater than 0";
+        cout << "Invaild input: The size of the graph must be greater than 0\n";
         return 0;
     }
     
@@ -222,11 +228,20 @@ int main()
 
     // Function call
 
-     cout << "input the shortest path source vertex\t";
-     size_t src_ver;
-     cin >> src_ver;
+    int src_ver;
+    do{
+        cout << "Enter the source vertex for the shortest path\n";
+        cin >> src_ver;
+        if(src_ver >= (int)size || src_ver < 0){
+            cout << "Invalid input: The source vertex must be less than the size of the graph\n";
+        }
+    } while(src_ver >= (int)size || src_ver < 0);
+    
 
-    dijkstra(graph1, src_ver);
+        
+     
+
+    dijkstra(graph1, (size_t)src_ver);
 
     return 0;
 }
