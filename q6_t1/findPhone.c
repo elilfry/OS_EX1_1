@@ -5,7 +5,7 @@ how to run the program
 - open terminal
 - type the following commands:
     $ make
-    findPhone <name>
+    $ findPhone <name>
 
 *example: ./findPhone "John Doe"
     output: 123-456-7890

@@ -1,7 +1,13 @@
-//make
-//./q4_t1 < good_input1.txt > out1.txt
+/*
+how to run:
+
+$ make
+$ ./q4_t1 < good_input1.txt > out1.txt
 
 
+*/
+
+//$ gcov q4_t1.cpp
 
 // We took the dijkstra algorithm from geeksforgeeks and modified it to the format we've been asked to:
 #include <iostream>
@@ -13,14 +19,7 @@ using namespace std;
 
 vector<vector<int>> loadGraph(size_t size){
     vector<vector<int>> graph(size, vector<int>(size, 0));
-    //print the graph
-
-    for(size_t i = 0; i<size; i++){
-        for(size_t j = 0; j<size; j++){
-            cout << graph[i][j] << " ";
-        }
-        cout << endl;
-    }
+    
     int input;
     //Get the input weights and place them in the adjacency matrix
     for (size_t i = 0; i < size; i++) {
@@ -39,7 +38,7 @@ vector<vector<int>> loadGraph(size_t size){
             }
         }
     }
-    cout << "\n The graph is: \n";
+    cout << "\nThe graph is: \n";
     
 
     //print the graph

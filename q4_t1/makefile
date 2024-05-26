@@ -15,6 +15,8 @@ $(TARGET): $(SRC)
 
 .PHONY: clean all
 
+
+
 clean:
 	rm -f *.gcov *.gcda *.gcno $(TARGET)
 

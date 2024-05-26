@@ -1,0 +1,11 @@
+Enter the amount of vertices in the graph
+Enter the weight of [0] -> [1] edge Enter the weight of [0] -> [2] edge Enter the weight of [1] -> [0] edge Enter the weight of [1] -> [2] edge Enter the weight of [2] -> [0] edge Enter the weight of [2] -> [1] edge 
+The graph is: 
+0 1 2 
+3 0 4 
+5 6 0 
+Enter the source vertex for the shortest path
+Vertex 	 Distance from Source vertex:  0
+0 				0
+1 				1
+2 				2

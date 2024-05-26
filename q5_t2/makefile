@@ -20,8 +20,6 @@ clean:
 
 
 
-
-
 # ./brute_o3 123 100
 # gprof brute_o3 gmon.out > analysis_brute_o3_100.txt
 
