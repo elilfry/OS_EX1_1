@@ -3,9 +3,8 @@ how to run:
 
 $ make
 $ ./q4_t1 < good_input1.txt > out1.txt
-
-
 */
+
 
 //$ gcov q4_t1.cpp
 
