@@ -1,4 +1,4 @@
-# OS_EX1_1: Operating System Exercises - Linux Exploration
+# OS_EX1: Operating System Exercises - Linux Exploration
 
 Welcome to OS_EX1_1, a collection of exercises designed to help you explore the functionalities and tools available in Linux. Each exercise focuses on a practical application of a specific concept.
 
@@ -21,6 +21,12 @@ Welcome to OS_EX1_1, a collection of exercises designed to help you explore the 
 4. **Code Coverage**: Modify an existing implementation of Dijkstra's shortest path algorithm to accept a new graph from standard input and perform validity checks. Use `gcov` to measure the coverage of your code by your tests.
 
 5. **Profiling**: Implement three solutions to the max subarray sum problem with varying time complexities (n, n^2, and n^3). Profile these solutions using `gprof` to analyze their performance.
+
+6. **Understanding Process Communication**:
+
+Enhance your understanding of system calls like fork(), exec(), and pipes by implementing a phonebook application.
+Create two programs: add2PB to add entries and findPhone to search for phone numbers.
+Focus on using the mentioned system calls for communication between
 
 ## Getting Started
 
